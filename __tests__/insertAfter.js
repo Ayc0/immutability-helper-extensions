@@ -1,4 +1,4 @@
-const update = require("../find");
+const update = require("../insertAfter");
 
 const state = {
   users: [
@@ -10,18 +10,20 @@ const state = {
 
 const expectedState = {
   users: [
-    { user: "barney", age: 35, active: true },
+    { user: "barney", age: 36, active: true },
+    { user: "rodrigo", age: 40, active: false },
     { user: "fred", age: 40, active: false },
-    { user: "pebbles", age: 1, active: true }
+    { user: "pebbles", age: 1, active: true },
+    { user: "rodrigo", age: 40, active: false }
   ]
 };
 
 const modifiedState = update(state, {
   users: {
-    $find: [{ user: "barney" }, { age: { $set: 35 } }]
+    $insertAfter: [{ active: true }, { user: "rodrigo", age: 40, active: false }]
   }
 });
 
-test("find", () => {
+test("insertAfter", () => {
   expect(modifiedState).toEqual(expectedState);
 });
