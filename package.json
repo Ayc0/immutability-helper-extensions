@@ -1,11 +1,16 @@
 {
   "name": "immutability-helper-extensions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extensions for immutability-helper",
   "main": "index.js",
   "repository": "git@github.com:Ayc0/immutability-helper-extensions.git",
   "author": "Ayc0 <ayc0.benj@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "javascript",
+    "immutability-helper",
+    "extension"
+  ],
   "jest": {
     "testEnvironment": "node"
   },
