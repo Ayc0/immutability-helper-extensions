@@ -1,0 +1,18 @@
+{
+  "name": "immutability-helper-extensions",
+  "version": "0.0.0",
+  "description": "Extensions for immutability-helper",
+  "main": "index.js",
+  "repository": "git@github.com:Ayc0/immutability-helper-extensions.git",
+  "author": "Ayc0 <ayc0.benj@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "peerDependencies": {
+    "immutability-helper": "^2.7.1"
+  },
+  "devDependencies": {
+    "jest": "^23.4.2"
+  }
+}
