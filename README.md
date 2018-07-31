@@ -83,6 +83,7 @@ const state = {
 
 const updatedState = update(state, {
   users: {
+    // $delete: selection
     $delete: { user: "barney" }
   }
 });
@@ -110,6 +111,7 @@ const state = {
 
 const updateState = update(state, {
   users: {
+    // $insertAfter: [selection, element]
     $insertAfter: [{ active: true }, { user: "rodrigo", age: 40, active: false }]
   }
 });
@@ -140,6 +142,7 @@ const state = {
 
 const updateState = update(state, {
   users: {
+    // $insertBefore: [selection, element]
     $insertBefore: [{ active: true }, { user: "rodrigo", age: 40, active: false }]
   }
 });
@@ -172,6 +175,7 @@ const state = {
 
 const updatedState = update(state, {
   users: {
+    // $deleteAfter: selection
     $deleteAfter: { active: true }
   }
 });
@@ -202,6 +206,7 @@ const state = {
 
 const updatedState = update(state, {
   users: {
+    // $deleteBefore: selection
     $deleteBefore: { active: true }
   }
 });
