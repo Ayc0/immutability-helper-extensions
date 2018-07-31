@@ -1,3 +1,5 @@
+This module is an extension of [immutability-helper](https://github.com/kolodny/immutability-helper).
+
 # Installation
 
 With `yarn`:
