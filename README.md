@@ -41,6 +41,30 @@ require("immutability-helper-extensions");
 - [`$deleteAfter`](#deleteafter): find every element of an array that matches the selection and remove the firsts elements after them
 - [`$deleteBefore`](#deletebefore): find every element of an array that matches the selection and remove the firsts elements before them
 
+# Selectors
+
+When you want to select an element in any of those functions, under the hood [lodash's iteratee](https://lodash.com/docs/4.17.10#iteratee) is used.
+
+```js
+const users = [{ user: "barney", age: 36, active: true }, { user: "fred", age: 40, active: false }];
+
+// Any function
+users.filter(_.iteratee(u => u.active));
+// => [{ 'user': 'barney', 'age': 36, 'active': true }]
+
+// The `_.matches` iteratee shorthand.
+users.filter(_.iteratee({ user: "barney", active: true }));
+// => [{ 'user': 'barney', 'age': 36, 'active': true }]
+
+// The `_.matchesProperty` iteratee shorthand.
+users.filter(_.iteratee(["user", "fred"]));
+// => [{ 'user': 'fred', 'age': 40 }]
+
+// The `_.property` iteratee shorthand.
+users.map(_.iteratee("user"));
+// => ['barney', 'fred']
+```
+
 ## $find
 
 ```js
