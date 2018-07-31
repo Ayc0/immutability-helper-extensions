@@ -32,12 +32,12 @@ require("immutability-helper-extensions");
 
 # List of extensions
 
-- [`$find`](#$find): find every element of an array that matches the selection and update it
-- [`$delete`](#$delete): remove every elements of an array that matches the selection
-- [`$insertAfter`](#$insertAfter): find every element of an array that matches the selection and add after them a new element
-- [`$insertBefore`](#$insertBefore): find every element of an array that matches the selection and add before them a new element
-- [`$deleteAfter`](#$deleteAfter): find every element of an array that matches the selection and remove the firsts elements after them
-- [`$deleteBefore`](#$deleteBefore): find every element of an array that matches the selection and remove the firsts elements before them
+- [`$find`](#find): find every element of an array that matches the selection and update it
+- [`$delete`](#delete): remove every elements of an array that matches the selection
+- [`$insertAfter`](#insertafter): find every element of an array that matches the selection and add after them a new element
+- [`$insertBefore`](#insertbefore): find every element of an array that matches the selection and add before them a new element
+- [`$deleteAfter`](#deleteafter): find every element of an array that matches the selection and remove the firsts elements after them
+- [`$deleteBefore`](#deletebefore): find every element of an array that matches the selection and remove the firsts elements before them
 
 ## $find
 
