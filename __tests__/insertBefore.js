@@ -18,12 +18,12 @@ const expectedState = {
   ]
 };
 
-const modifiedState = update(state, {
+const updatedState = update(state, {
   users: {
     $insertBefore: [{ active: true }, { user: "rodrigo", age: 40, active: false }]
   }
 });
 
 test("insertAfter", () => {
-  expect(modifiedState).toEqual(expectedState);
+  expect(updatedState).toEqual(expectedState);
 });

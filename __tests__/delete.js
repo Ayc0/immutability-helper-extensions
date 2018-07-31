@@ -12,12 +12,12 @@ const expectedState = {
   users: [{ user: "fred", age: 40, active: false }, { user: "pebbles", age: 1, active: true }]
 };
 
-const modifiedState = update(state, {
+const updatedState = update(state, {
   users: {
     $delete: { user: "barney" }
   }
 });
 
 test("find", () => {
-  expect(modifiedState).toEqual(expectedState);
+  expect(updatedState).toEqual(expectedState);
 });
