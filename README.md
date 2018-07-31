@@ -36,6 +36,7 @@ require("immutability-helper-extensions");
 - `$delete`: remove every elements of an array that matches the selection
 - `$insertAfter`: find every element of an array that matches the selection and add after them a new element
 - `$insertBefore`: find every element of an array that matches the selection and add before them a new element
+- `$deleteAfter`: find every element of an array that matches the selection and remove the firsts elements after them
 
 ## $find
 
@@ -147,6 +148,36 @@ const updateState = update(state, {
     { user: "barney", age: 36, active: true },
     { user: "fred", age: 40, active: false },
     { user: "rodrigo", age: 40, active: false },
+    { user: "pebbles", age: 1, active: true }
+  ]
+}
+*/
+```
+
+## $deleteAfter
+
+```js
+const state = {
+  users: [
+    { user: "barney", age: 36, active: true },
+    { user: "rodrigo", age: 48, active: false },
+    { user: "fred", age: 40, active: false },
+    { user: "pebbles", age: 1, active: true },
+    { user: "rodrigo", age: 48, active: false }
+  ]
+};
+
+const updatedState = update(state, {
+  users: {
+    $deleteAfter: { active: true }
+  }
+});
+
+/*
+{
+  users: [
+    { user: "barney", age: 36, active: true },
+    { user: "fred", age: 40, active: false },
     { user: "pebbles", age: 1, active: true }
   ]
 }
